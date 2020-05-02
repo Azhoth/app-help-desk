@@ -19,6 +19,8 @@
         echo 'Usuário válido, logando...';
         header('Location: home.php');
         $_SESSION['autenticado'] = 'SIM';
+        $_SESSION['x'] = '1';
+        $_SESSION['y'] = '2';
         }else{
         header('Location: index.php?login=erro');
         $_SESSION['autenticado'] = 'NAO';
