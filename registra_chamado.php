@@ -1,7 +1,8 @@
 <?php
+    session_start();
     $arquivo = fopen('arquivo.txt', 'a');
     $chamados = str_replace('#', '-', $_POST);
-    $chamados = implode('#', $chamados) . PHP_EOL;
+    $chamados = $_SESSION['id'] . '#' . implode('#', $chamados) . PHP_EOL;
     fwrite($arquivo, $chamados);
     fclose($arquivo);
 
