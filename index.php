@@ -55,7 +55,8 @@
           </div>
         </div>
     </div>
-    <p>Login para teste: user@email.com</p>
-    <p>Senha: 987654</p>
+    <p>Login ADM - adm@email.com / user@email.com</p>
+    <p>Login Comum - joao@email.com / maria@email.com</p>
+    <p>Senha Padrão: 1234</p>
   </body>
 </html>

@@ -5,8 +5,10 @@
     $validador = false;
     //Usuários válidos
     $usuarios_app = array(
-        array('email' => 'adm@email.com', 'senha' => '123456'),
-        array('email' => 'user@email.com', 'senha' => '987654'),
+        array('email' => 'adm@email.com', 'senha' => '1234'),
+        array('email' => 'user@email.com', 'senha' => '1234'),
+        array('email' => 'joao@email.com', 'senha' => '1234'),
+        array('email' => 'maria@email.com', 'senha' => '1234'),
     );
     foreach($usuarios_app as $user){
         
