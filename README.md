@@ -1,2 +1,2 @@
-# app-help-desk
-Aplicação de um Help Desk com PHP
+# App Help Desk
+Aplicação de um Help Desk com PHP. Versão básica 1.0
