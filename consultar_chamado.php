@@ -4,7 +4,17 @@
 
   while(!feof($arquivo)){
     $registro = fgets($arquivo);
-    $chamados[] = $registro;
+    $validar_exibicao_chamado = explode('#', $registro);                
+    if($_SESSION['perfil_id'] == 2){
+      if($_SESSION['id'] != $validar_exibicao_chamado[0]){
+      continue; //Só irá exibir o chamado se ele foi criado pelo mesmo usuário
+      }else{
+        $chamados[] = $registro;
+      }
+    }else{
+      $chamados[] = $registro;
+    }
+    
   }
 
   fclose($arquivo);
@@ -57,11 +67,11 @@
             <?php
               foreach($chamados as $chamado){
                 $chamado = explode('#', $chamado);
-                if($_SESSION['perfil_id'] == 2){
-                  if($_SESSION['id'] != $chamado[0]){
-                  continue; //Só irá exibir o chamado se ele foi criado pelo mesmo usuário
-                  }
-                }
+                // if($_SESSION['perfil_id'] == 2){
+                //   if($_SESSION['id'] != $chamado[0]){
+                //   continue; //Só irá exibir o chamado se ele foi criado pelo mesmo usuário
+                //   }
+                // }
                 if(count($chamado) < 3){
                   continue;//Só irá exibir chamados que tenham todas as informações
                 }
